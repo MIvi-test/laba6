@@ -1,0 +1,5 @@
+put a=10
+get a
+badcmd
+put b = -7
+get b

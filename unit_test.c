@@ -4,15 +4,18 @@
 #include <stdlib.h>
 
 #define ASSERT_TRUE(condition)                                                      \
-    do {                                                                            \
-        if (!(condition)) {                                                         \
+    do                                                                              \
+    {                                                                               \
+        if (!(condition))                                                           \
+        {                                                                           \
             fprintf(stderr, "Assertion failed: %s (%s:%d)\n", #condition, __FILE__, \
                     __LINE__);                                                      \
             return false;                                                           \
         }                                                                           \
     } while (0)
 
-static bool test_put_get_and_replace(void) {
+static bool test_put_get_and_replace(void)
+{
     HashTable table;
     int value = 0;
 
@@ -30,7 +33,8 @@ static bool test_put_get_and_replace(void) {
     return true;
 }
 
-static bool test_delete_and_missing_key(void) {
+static bool test_delete_and_missing_key(void)
+{
     HashTable table;
     int value = 0;
 
@@ -45,7 +49,8 @@ static bool test_delete_and_missing_key(void) {
     return true;
 }
 
-static bool test_resize_preserves_values(void) {
+static bool test_resize_preserves_values(void)
+{
     HashTable table;
     int value = 0;
 
@@ -68,7 +73,8 @@ static bool test_resize_preserves_values(void) {
     return true;
 }
 
-static bool test_linear_probing_collision_handling(void) {
+static bool test_linear_probing_collision_handling(void)
+{
     HashTable table;
     int value = 0;
 
@@ -85,7 +91,8 @@ static bool test_linear_probing_collision_handling(void) {
     return true;
 }
 
-static bool test_deleted_slot_can_be_reused(void) {
+static bool test_deleted_slot_can_be_reused(void)
+{
     HashTable table;
     int value = 0;
 
@@ -103,7 +110,8 @@ static bool test_deleted_slot_can_be_reused(void) {
     return true;
 }
 
-int main(void) {
+int main(void)
+{
     ASSERT_TRUE(test_put_get_and_replace());
     ASSERT_TRUE(test_delete_and_missing_key());
     ASSERT_TRUE(test_resize_preserves_values());

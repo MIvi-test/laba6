@@ -4,19 +4,22 @@
 #include <stdbool.h>
 #include <stddef.h>
 
-typedef enum SlotState {
+typedef enum SlotState
+{
     SLOT_EMPTY = 0,
     SLOT_OCCUPIED = 1,
     SLOT_DELETED = 2
 } SlotState;
 
-typedef struct HashEntry {
+typedef struct HashEntry
+{
     char *key;
     int value;
     SlotState state;
 } HashEntry;
 
-typedef struct HashTable {
+typedef struct HashTable
+{
     HashEntry *entries;
     size_t size;
     size_t capacity;
