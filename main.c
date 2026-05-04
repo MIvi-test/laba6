@@ -10,7 +10,7 @@
 #include <time.h>
 
 #define INITIAL_CAPACITY 8U
-#define LOAD_FACTOR_THRESHOLD 0.7
+#define LOAD_FACTOR_THRESHOLD 0.55
 #define MAX_LINE_LENGTH 4096
 #define MAX_KEY_LENGTH 1024
 

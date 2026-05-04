@@ -11,7 +11,6 @@ with open("big_file.txt", "a", encoding="utf-8") as file:
     max_int = 2**31-1
     for i in range(5_000_000):
         file.write(f"put {generate_random_string()} = {randint(0,max_int)}\n")
-    file.write(f"put basfd\n")
     
         
 
